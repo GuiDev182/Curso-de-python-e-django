@@ -1,7 +1,6 @@
 #bliblioteca math
 import math
 import random
-from random import Random
 import pygame
 
 
@@ -55,22 +54,19 @@ import pygame
 #faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada
 
 # lista_alunos = ["joao", "felipe", "jose", "maria"]
-# ordem_apresentacao = [1, 2, 3, 4]
-
-# escolhido = random.choice(lista_alunos)
-# random.shuffle(ordem_apresentacao)
-
-# print(f"a ordem sera de apresentacao sera: \n {lista_alunos}\n {ordem_apresentacao}")
+# random.shuffle(lista_alunos)
+#
+# print(f"a ordem sera de apresentacao sera: {lista_alunos}")
 
 #faça um programa em python que abra e reproduza o audio de um arquivo em mp3
 
-pygame.mixer.init()
-pygame.mixer.music.load("edm-deep-house-ish-female-vocal-112184.mp3")
-pygame.mixer.music.play()
-
-while pygame.mixer.music.get_busy():
-    continue
-pygame.quit()
+# pygame.mixer.init()
+# pygame.mixer.music.load("edm-deep-house-ish-female-vocal-112184.mp3")
+# pygame.mixer.music.play()
+#
+# while pygame.mixer.music.get_busy():
+#     continue
+# # pygame.quit()
 
 
 
