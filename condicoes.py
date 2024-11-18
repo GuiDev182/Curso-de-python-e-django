@@ -125,10 +125,111 @@ else:
     print(f"as medidas {ladoA}, {ladoB} e {ladoC} não formam um triangulo")'''
 
 
+#escreva um programa para aprovar o emprestimo bancario para a compra de uma casa.
+#o programa vai perguntar o valor da csa, o salario do comprador e em quantos anos  ele vai pagar.
+#calcule o valor da prestação mensal, sabendo que ela nao pode exceder 30% do salario ou entao o emprestimo sera negado
 
+'''valor_casa = float(input("Digite o valor da casa: "))
+salario_comprador = float(input("Digite o seu salario: R$ "))
+anos_pagamento = int(input("Digite quantos anos você quer pagar a casa: "))
 
+valor_mensal = valor_casa / anos_pagamento
+porcentagem_emprestimo = salario_comprador * 0.30
 
+if valor_mensal < porcentagem_emprestimo:
+    print("Seu emprestimo esta aprovado!")
+else:
+    print("Seu emprestimo foi negado!")'''
 
+#escreva um programa que leia um numero inteiro qualquer e peça para o usuario escolher qual sera a base de conversao:
+#1 para binario
+#2 para octal
+#3 para hexadecimal
 
+'''numero_inteiro = int(input("Digite um numero inteiro: "))
+base_conversao = int(input("Digite qual a base de conversão sera usada: \n 1 - binario\n 2 - octal\n 3 - hexadecimal\n R: "))
+
+if base_conversao == 1:
+    binario = bin(numero_inteiro)
+    print(f"o numero {numero_inteiro} convertido para binário é {binario}")
+elif base_conversao == 2:
+    octal = oct(numero_inteiro)
+    print(f"o numero {numero_inteiro} convertido para octal é {octal}")
+elif base_conversao == 3:
+    hexa = hex(numero_inteiro)
+    print(f"o numero {numero_inteiro} convertido para hexadeciaml é {hexa}")
+else:
+    print("Você digitou um numero incorreto, tente novamente!")'''
+
+#escreva um programa que leia dois numeros inteiros e compare-os, mostrando na tela uma mensagem:
+#o primeiro valor é maior
+#o segundo valor é maior
+#nao existe valor maior, os dois sao iguais
+
+'''primeiro_numero = int(input("Digite o primeiro numero: "))
+segundo_numero = int(input("Digite o segundo numero: "))
+if primeiro_numero > segundo_numero:
+    print(f"o numero {primeiro_numero} é maior que {segundo_numero}")
+elif segundo_numero > primeiro_numero:
+    print(f"o numero {segundo_numero} é maior que {primeiro_numero}")
+else:
+    print("os dois numeros são iguais")'''
+
+#faça um programa que leia o ano de um jovem e informe, de acordo com a sua idade:
+#se ele ainda vai se alistar ao serviço militar.
+#se é a hora de se alistar
+#se ja passou do tempo do alistamento
+#seu programa tambem devera mostrar o tempo que falta ou que passou do prazo
+
+'''ano = int(input("Digite seu ano de nascimento: "))
+
+idade = 2024 - ano
+
+if idade == 18:
+    print(f"você tem {idade} e precisa se alistar ")
+elif idade < 18:
+    tempo_restante = 18 - idade
+    print(f"Você ainda nao possui idade para se alistar, o prazo para o alistamento é de {tempo_restante}")
+elif idade > 18:
+    prazo_passou = idade - 18
+    print(f"Você ja tem mais de {idade} anos e ja se passaram mais {prazo_passou} anos, vai alistar nao vagabundo ?")'''
+
+#crie um programa que leia duas notas de um aluno e calcule sua media, mostrando uma mensagem no final, de acordo com a media atingida
+#media abaixo de 5.0: reprovado
+#media entre 5.0 e 6.9: recuperação
+#media 7.0 ou superior: aprovado
+
+'''primeira_nota = float(input("Digite a primeira nota: "))
+segunda_nota = float(input("Digite a segunda nota: "))
+media = (primeira_nota + segunda_nota) / 2
+
+if media >= 7.0:
+    print(f"sua média é de {media}, você esta aprovado!")
+elif (media > 5.0) and (media < 6.9):
+    print(f"sua média é de {media}, Você esta de recuperação")
+else:
+    print(f"sua media foi de {media}, você esta reprovado")'''
+
+#A confederação nacional de natação precisa de um programa que leia o ano de nascimento de um atleta
+# e mostre sua categoria, de acordo com a idade:
+#ate 9 anos: mirin
+#ate 14 anos: infantil
+#ate 19 anos: junior
+#ate 20 anos: senior
+# acima: master
+
+'''ano_nascimento = int(input("Digite o seu ano de nascimento: "))
+idade = 2024 - ano_nascimento
+
+if idade < 9:
+    print("Sua categoria: Mirim")
+elif (idade >= 9) and (idade < 15):
+    print("sua categoria: infantil")
+elif (idade >= 15) and (idade < 19):
+    print("sua categoria: junior")
+elif (idade >= 19) and (idade <= 20):
+    print("sua categoria: senior")
+else:
+    print("sua categoria: master")'''
 
 
