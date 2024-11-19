@@ -14,6 +14,9 @@
 # != diferente
 
 import random
+from random import Random
+
+from pygame.time import delay
 
 #escreva um programa que faça o computador "pensar" em un umero inteiro entre 0 e 5.
 #e peça para o usuario tentar descobrir qual foi o numero escolhido pelo computador.
@@ -232,4 +235,94 @@ elif (idade >= 19) and (idade <= 20):
 else:
     print("sua categoria: master")'''
 
+#desenvolva uma logica que leia o peso e a altura de uma pessoa, calcule seu imc e mostre seu status
+#de acordo com a tabela abaixo:
+
+#abaixo de 18.5:abaixo do peso
+#entre 18.5 e 25:peso ideal
+#25 ate 30:sobrepeso
+#30 ate 40:obesidade
+#acima de 40:obesidade morbida
+
+'''peso = float(input("Digite o seu peso atual: "))
+altura = float(input("Digite a sua altura: "))
+imc = peso / altura
+
+if peso <= 18.5:
+    print("você esta abaixo do peso")
+elif peso > 18.5 and peso <= 25:
+    print("você esta no peso ideal")
+elif peso > 25 and peso <= 30:
+    print("Você esta sobrepeso")
+elif peso > 30 and peso <= 40:
+    print("você esta com obesidade")
+else:
+    print("Você esta acima do peso")'''
+
+# elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
+#a vista dinheiro/cheque: 10% de desconto
+#a vista no cartao: 5% de desconto
+#em ate 2x no cartao: preço normal
+#3x ou mais:20% de juros
+
+'''valor_produto = float(input("Digite o valor do produto: "))
+forma_pagamento = int(input("Digite a forma de pagamento: \n 1 - a vista dnheiro ou cheque \n 2 - a vista no cartao \n 3 - em ate 2x no cartão \n 4 - 3x ou mais \n R:"))
+
+if forma_pagamento == 1:
+    desconto_10 =  valor_produto - (valor_produto * 0.10)
+    print(f"O valor do produto final com desconto é de R${desconto_10}")
+elif forma_pagamento == 2:
+    desconto_05 = - valor_produto - (valor_produto * 0.5)
+    print(f"O valor do produto final com desconto é de R${desconto_05}")
+elif forma_pagamento == 3:
+    parcela_duas_vezes = valor_produto / 2
+    print(f"O valor do produto final é de R${valor_produto} com parcelas de R${parcela_duas_vezes}")
+elif forma_pagamento == 4:
+    total_parcelas = int(input("quantas parcelas: "))
+    total = valor_produto + (valor_produto * 100 /0.20)
+    parcela = total / total_parcelas
+    print(f"O valor do produto final é de R${total} com parcelas de R${parcela}")
+else:
+    print("Você digitou o a forma de pagamento incorreta, tente novamente")'''
+
+# crie um programa que jogue jokenpo
+
+'''print("Vamos jogar jokenpo!!!")
+escolha_jogador = int(input("Faça sua escolha: \n  1 - Pedra \n 2 - Papel \n 3 - tesoura \n R: "))
+print("Agora o computador vai fazer sua escolha...")
+delay(2000)
+print("So mais um pouco...")
+delay(2000)
+print("Todos pronto? ")
+delay(2000)
+print("Jo...")
+delay(1000)
+print("ken...")
+delay(1000)
+print("po...")
+delay(2000)
+escolha_computador = random.randint(0,3)
+#escolha pedra
+if escolha_jogador == 1 and escolha_computador == 1:
+    print(f"Você escolheu PEDRA e o computador escolheu PEDRA, deu empate!")
+elif escolha_jogador == 1 and escolha_computador == 2:
+    print(f"Você escolheu PEDRA e o computador escolheu PAPEL, o computador venceu!")
+elif escolha_jogador == 1 and escolha_computador == 3:
+    print(f"Você escolheu PEDRA e o computador escolheu TESOURA, você venceu!")
+#escolha papel
+elif escolha_jogador == 2 and escolha_computador == 1:
+    print(f"Você escolheu PAPEL e o computador escolheu PEDRA, você venceu!")
+elif escolha_jogador == 2 and escolha_computador == 2:
+    print(f"Você escolheu PAPEL e o computador escolheu PAPEL, deu empate!")
+elif escolha_jogador == 2 and escolha_computador == 3:
+    print(f"Você escolheu PAPEL e o computador escolheu TESOURA, o computador venceu!")
+#escolha tesoura
+elif escolha_jogador == 3 and escolha_computador == 1:
+    print(f"Você escolheu TESOURA e o computador escolheu PEDRA, o computador venceu")
+elif escolha_jogador == 3 and escolha_computador == 2:
+    print(f"Você escolheu TESOURA e o computador escolheu PAPEL, você venceu!")
+elif escolha_jogador == 3 and escolha_computador == 3:
+    print(f"Você escolheu TESOURA e o computador escolheu TESOURA, Deu empate!")
+else:
+    print("ops...opção invalida, tente novamente")'''
 
