@@ -13,6 +13,7 @@
 # == igual
 # != diferente
 
+
 import random
 from random import Random
 
