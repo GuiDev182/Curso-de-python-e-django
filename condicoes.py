@@ -327,3 +327,6 @@ elif escolha_jogador == 3 and escolha_computador == 3:
 else:
     print("ops...opção invalida, tente novamente")'''
 
+
+
+

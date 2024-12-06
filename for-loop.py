@@ -50,10 +50,10 @@ print(f"a soma de todos os valores é de {soma}")'''
 
 #Faça um programa que leia um numero inteiro qualquer e mostre na sua tela a sua tabuada
 
-'''numero = int(input("Digite um numero para saber sua tabuada: "))
+numero = int(input("Digite um numero para saber sua tabuada: "))
 
-for i in range(10):
-     print(f"{numero} x {i+1} = {numero*(i+1)}")'''
+for indice in range(1, 10):
+     print(f"{numero} x {indice} = {numero*indice}")
 
 #desenvolva um programa que leia seis numeros inteiros e mostre a soma apenas daqueles que forem pares.
 #se o valor digitado for impar, desconsidere
