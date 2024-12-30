@@ -20,6 +20,7 @@ while numero != 0:
 print(f"você digitou {par} numeros pares e {impar} numeros impares")
 print(f"numeros pares digitados: {lista_par}")
 print(f"numeros pares digitados: {lista_impar}")'''
+
 #import random
 
 #faça um programa que leia o sexo de uma pessoa, mas so aceite os valores 'm' ou 'f'
@@ -54,7 +55,7 @@ print(f"Parabéns! você acertou ! Foram gastos {palpites} palpites para voce ac
 #[4]novos numeros
 #[5]sair do programa
 #seu programa deverá realizar a operação solicitada em cada caso
-print('---'*20)
+'''print('---'*20)
 valor_um = int(input("Digite o primeiro valor: \n R: "))
 valor_dois = int(input("Digite o segundo valor: \n R: "))
 print("Menu")
@@ -86,15 +87,111 @@ else:
             exit()
     elif menu == 5:
         print("Você saiu do programa")
-        exit()
+        exit()'''
+
+#faça um programa que leia um numero qualquer e mostre o seu fatorial.
+#ex: 5º= 5x4x3x2x1=120
+
+'''numero = int(input("Digite um numero para saber o seu fatorial: "))
+fatorando = numero - 1
+fatorial = numero * fatorando
+
+while fatorando != 1:
+    fatorando -= 1
+    fatorial = (fatorial * fatorando)
+print(f"o fatorial do numero {numero} é {fatorial}")'''
+
+#desenvolva um programa que leia o primeiro termo e a razão de uma pa.
+#no final,mostre os 10 primeiros termos dessa progressao.
+
+'''primeiro_termo = int(input("Digite o primeiro termo de uma PA: "))
+razao = int(input("Digite a razão da PA: "))
+
+termo = 0
+while termo != 9:
+    primeiro_termo = primeiro_termo + razao
+    termo += 1
+    print(primeiro_termo)'''
+
+#melhore o desafio anterior perguntando para o usuario se ele quer mostrar mais alguns termos. o programa encerra quando
+#ele disser que quer mostrar os termos
+
+'''primeiro_termo = int(input("Digite o primeiro termo de uma PA: "))
+razao = int(input("Digite a razão da PA: "))
+
+termo = 0
+qtd_termos_a_mais = 0
+while termo != 9:
+    primeiro_termo = primeiro_termo + razao
+    termo += 1
+    print(primeiro_termo)
+
+mais_termos = int(input("Gostaria de ver mais termos? \n 1 - Sim \n 2 - Não \n R: "))
+if mais_termos == 1:
+    qtd_termos = int(input("Quantos termos a mais gostaria de saber? \n R: "))
+    while qtd_termos_a_mais != qtd_termos:
+        primeiro_termo = primeiro_termo + razao
+        termo += 1
+        qtd_termos_a_mais += 1
+        print(primeiro_termo)
+else:
+    print("Programa finalizado!")
+    exit()'''
+
+#escreva um programa que leia um numero n inteiro qualquer e mostre na tela os n primeiros elementos de uma
+#sequencia de fibonnaci
+#ex: 0 - 1 - 1 - 2 -3 - 5 - 8
+
+'''lista_fibbo = [1,1,2]
+contador = 0
+numero = int(input("Digite um numero: "))
 
 
+while contador != numero:
+    contador += 1
+    proximo_numero = lista_fibbo[-1] + lista_fibbo[-2]
+    lista_fibbo.append(proximo_numero)
+print(lista_fibbo[0:contador])'''
 
+#crie um programa que leia varios numeros inteiros pelo teclado.
+#o programa só vai parar quando o usuario digitar o valor 999, que é condição de parada.
+#no final, mostre quantos numeros foram digitados e qual foi a soma entre eles(desconsiderando o flag)
 
+'''contador_numeros = 0
+lista_numeros = []
+numeros = int(input("Digite um numero inteiro: "))
 
+while numeros != 999:
+    contador_numeros += 1
+    lista_numeros.append(numeros)
+    numeros = int(input("Digite um numero inteiro: "))
+else:
+    if numeros == 999:
+        soma_lista_numeros = sum(lista_numeros)
+        print(f"Você digitou o numero 999, você digitou {contador_numeros} numeros antes da parada e soma deles é {soma_lista_numeros}")
+        exit()'''
 
+#crie um programa que leia varios numeros inteiros pelo teclado, no final da execução, mostre a media entre todos os valores
+#e qual foi o maior e menor valor lido. o programa deve perguntar ao usuario se ele quer ou nao continuar a digitar valores
 
-
+'''lista_numeros = [0]
+numeros = int(input("Digite um numero: "))
+menu = int(input("Você deseja continuar a digitar? \n 1 - Sim \n 2 - Não \n R: "))
+lista_numeros.append(numeros)
+while menu != 2:
+    if menu > 2 or menu < 1:
+        print("valor incorreto, tente novamente")
+        menu = int(input("Você deseja continuar a digitar? \n 1 - Sim \n 2 - Não \n R: "))
+    else:
+        numeros = int(input("Digite um numero: "))
+        lista_numeros.append(numeros)
+        menu = int(input("Você deseja continuar a digitar? \n 1 - Sim \n 2 - Não \n R: "))
+else:
+    media = sum(lista_numeros) / 2
+    lista_numeros.sort()
+    maior = lista_numeros[-1]
+    menor = lista_numeros[0 + 1]
+    print(f"a média dos numeros digitados foi {media}, o maior numero foi {maior} e o menor foi {menor}")'''
 
 
 
