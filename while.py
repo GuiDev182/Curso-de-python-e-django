@@ -194,4 +194,127 @@ else:
     print(f"a média dos numeros digitados foi {media}, o maior numero foi {maior} e o menor foi {menor}")'''
 
 
+# faça um programa que mostre a tabuada de varios numeros, um de cada vez, para cada valor digitado pelo usuario.
+#o programa sera interronpido quando o numero solicitado for negativo
+
+'''numero_solicitado = int(input("Digite um numero para saber sua tabuada: "))
+while True:
+    if numero_solicitado < 0:
+        print("Voce digitou um numero negativo")
+        break
+    else:
+        for multiplicador in range(10):
+            print(f"{numero_solicitado} x {multiplicador + 1} = {numero_solicitado * (multiplicador + 1)}")
+        numero_solicitado = int(input("Digite um numero para saber sua tabuada: "))'''
+
+#faça um programa que jogue par ou impar com o computador. O jogo só sera interrompido quando o jogador PERDER,
+#mostrando o total de vitorias consecutivas que ele conquistou no final do jogo
+'''import random
+
+print("JOGO DO PAR OU IMPAR")
+escolha_jogador = int(input("Faça uma escolha: \n 1 - Par \n 2 - Ímpar \n R: "))
+vitorias_jogador = 0
+if escolha_jogador == 1:
+    lista_impar = [1,3,5,7,9]
+    numero_jogador = int(input("Digite um numero Par de 1 a 10: "))
+    numero_computador = random.choice(lista_impar)
+    delay(1000)
+    print(f"o computador escolheu o numero {numero_computador}")
+    while numero_jogador > numero_computador:
+        print("Você Venceu")
+        vitorias_jogador += 1
+        print(f"Vitorias: {vitorias_jogador}")
+        break
+    else:
+        print("O computador venceu! tente novamente")
+        escolha_jogador = int(input("Faça uma escolha: \n 1 - Par \n 2 - Ímpar \n R: "))
+elif escolha_jogador == 2:
+    lista_par = [2,4,6,8,10]
+    numero_jogador = int(input("Digite um numero Ímpar de 1 a 10: "))
+    numero_computador = random.choice(lista_par)
+    delay(1000)
+    print(f"o computador escolheu o numero {numero_computador}")
+    while numero_jogador > numero_computador:
+        print("Você Venceu")
+        vitorias_jogador += 1
+        print(f"Vitorias: {vitorias_jogador}")
+        break
+    else:
+        print("O computador venceu! tente novamente")
+        escolha_jogador = int(input("Faça uma escolha: \n 1 - Par \n 2 - Ímpar \n R: "))'''
+
+#crie um programa que leia a idade e o sexo de varias pessoas. A cada pessoa cadastrada, o programa deverá perguntar se
+# o usuario quer ou não continuar. No final, mostre:
+# A) quantas pessoas tem mais de 18 anos.
+# B) quantos homens foram cadastrados.
+# C) quantas mulheres tem menos de 20
+
+'''print("CADASTRO DE PESSOAS")
+maiores_18 = 0
+masculino = 0
+feminino = 0
+mulheres_menos_20 = 0
+
+idade = int(input("Digite a sua idade: "))
+if idade >= 18:
+    maiores_18 += 1
+sexo = int(input("Digite o seu sexo: \n 1 - Masculino \n 2 - Feminino \n R: "))
+if sexo == 1:
+    masculino += 1
+else:
+    feminino += 1
+if idade <= 20 and sexo == 2:
+    mulheres_menos_20 += 1
+menu = int(input("Deseja continuar a cadastrar? \n 1 - Sim \n 2 - Não \n R: "))
+
+while menu != 2:
+    idade = int(input("Digite a sua idade: "))
+    if idade >= 18:
+        maiores_18 += 1
+    sexo = int(input("Digite o seu sexo: \n 1 - Masculino \n 2 - Feminino \n R: "))
+    if sexo == 1:
+        masculino += 1
+    else:
+        feminino += 1
+    if idade <= 20 and sexo == 2:
+        mulheres_menos_20 += 1
+    menu = int(input("Deseja continuar a cadastrar? \n 1 - Sim \n 2 - Não \n R: "))
+else:
+    if idade >= 18 and sexo == 1:
+        maiores_18 += 1
+        masculino += 1
+    elif idade >= 18 and sexo == 2:
+        maiores_18 += 1
+        feminino += 1
+    else:
+        feminino += 1
+        mulheres_menos_20 += 1
+
+print(f"existem {maiores_18} pessoas maiores que 18 anos, {masculino} pessoas masculinas ,  {feminino} pessoas femininas e {mulheres_menos_20} tem menos que 20 anos")'''
+
+
+#Crie um programa que leia o nome e o preço de vários produtos. O programa deverá perguntar se o usuário vai continuar ou não. No final, mostre:
+#A) qual é o total gasto na compra.
+#B) quantos produtos custam mais de R$1000.
+#C) qual é o nome do produto mais barato.
+
+print("CADASTRO DE PRODUTOS")
+
+total_gasto = 0
+produtos_maior_1000 = 0
+produtos = {}
+
+nome_produto = (input("Digite o nome do produto: ")).lower()
+produtos = [nome_produto]
+preco_produto = {float(input("preco do produto: "))}
+produtos = [preco_produto]
+
+print(produtos)
+
+
+
+
+
+
+
 
