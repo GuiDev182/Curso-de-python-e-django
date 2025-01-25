@@ -19,7 +19,6 @@ c = a + b
 print(c.count(5)) #mostra qyuantas vezes aparece o valor 5 na tupla
 print(c.index(8, 1)) # mostra em qual posição da tupla esta o valor 8, a partir do indice 1
 from random import randint, Random'''
-from manipulando_textos import lista
 
 #crie um programa que tenha uma tupla totalmente preenchida com uma contagem
 #de extensao, de zero ate vinte
@@ -128,15 +127,25 @@ for itens in range(0,1):
     print(f"{produtos[6]}........................R${produtos[7]}")
     print(f"{produtos[8]}........................R${produtos[9]}")'''
 
-#crie um programa que tenha uma tupla com varias palavras(nao suar acentos)
+#crie um programa que tenha uma tupla com varias palavras(nao usar acentos)
 #depois disso, voce deve mostrar para cada letra, quais sao suas vogais
 
-lista_palavras = ("me", "ajuda", "pelo", "amor", "de", "deus")
+'''lista_palavras = ("me", "ajuda", "pelo", "amor", "de", "deus")
 vogais = ('a', 'e', 'i', 'o', 'u')
+for palavra in lista_palavras:
+    print(f'\nNa palavra {palavra.upper()} temos ', end='')
+    for letra in palavra:
+        if letra.lower() in vogais:
+            print(letra, end=' ')
+        else:
+            print(' ', end=' ')
+print('\n')
+print('-'*30)
+print('FIM DO PROGRAMA')
+print('-'*30)'''
 
-for iten in range(0,6):
-    if 'a' in lista_palavras[0]:
-        print(f'a palavra {lista_palavras[0]} tem as vogais {vogais} ')
+
+
 
 
 
