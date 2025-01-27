@@ -114,6 +114,7 @@ valores.append(3)
 
 for c, v in enumerate(valores):
     print(f'na posição {c} encontrei o valor {v}')'''
+from sqlalchemy.sql.util import expand_column_list_from_order_by
 
 #faça uma programa que leia 5 valores numericos e guarde em uma lista.
 #no final mostre qual foi o maior  e o menor valor digitado e as suas
@@ -134,19 +135,35 @@ print(f"o maior valor foi {max(valores_numericos)}")'''
 # será adicionado. No final, serão exibidos todos os valores únicos
 #digitados, em ordem crescente.
 
-valores_numericos = []
-valores_digitados = enumerate(valores_numericos[-1])
+'''valores = []
 
-valores_numericos.append(int(input("Digite um valor: ")))
-menu = int(input("Deseja continuar a digitar: \n 1 - Sim \n 2 - Não"))
+while True:
+    valor = int(input("Digite um valor: "))
+    if valor not in valores:
+        valores.append(valor)
+    else:
+        print("Valor duplicado! Não vou adicionar...")
+    continuar = input("Quer continuar? [S/N] ").strip().upper()
+    if continuar == 'N':
+        break
+valores.sort()
+print(valores)'''
 
-while menu != 2:
-    valores_numericos.append(int(input("Digite um valor: ")))
-    menu = int(input("Deseja continuar a digitar: \n 1 - Sim \n 2 - Não"))
-    if valores_digitados in valores_numericos:
-        print("esse valor já esta na lista")
-        valores_numericos.pop()
-print(f"os valores em ordem crescente é: {valores_numericos.sort()}")
+#crie um programa onde o usuario possa digitar 5 valores numericos e
+#cadastre-os e uma lista, ja na posição correta de inserção(sem usar o sort())
+#no final mostre a lista ordenada na tela
+
+valores = []
+
+for valor in range(0, 5):
+    valor = int(input("Digite um numero: "))
+    if valor > valores[0]:
+        valores.append(valor)
+    elif valor
+print(valores)
+
+
+
 
 
 
