@@ -26,6 +26,7 @@ def contador(* num):
 contador(2,1,7)
 contador(8,0)
 contador(3)'''
+from random import randint
 from time import sleep
 
 
@@ -92,7 +93,7 @@ contador01(1, 11, 1)'''
         sleep(0.5)
         contagem += 1
     print("FIM!")
-contador01(10, 0, -2)'''
+contador01(10, 0, -2)
 
 print("Agora é sua vez de personalizar a contagem")
 sleep(0.5)
@@ -115,12 +116,6 @@ def contador03(inicio, fim, passo):
             sleep(1)
             contagem += passo
         print("FIM!")
-    elif (inicio > fim and passo == 0) or (inicio < fim and passo == 0):
-        for contagem in range(inicio, fim, -(passo)):
-            print(contagem, end=' ')
-            sleep(1)
-            contagem += passo
-        print("FIM!")
     else:
  #ordem decrescente
         for contagem in range(inicio,fim,-(passo)):
@@ -129,7 +124,56 @@ def contador03(inicio, fim, passo):
             contagem += passo
         print("FIM!")
 
-contador03(inicio, fim, passo)
+contador03(inicio, fim, passo)'''
+
+#faça um programa que tenha uma função chamada maior(), que receba varios
+#parametros com valores inteiros.
+#seu programa tem que analisar todos os valores e dizer qual deles é maior
+
+'''def maior(* num):
+    print('-'*30)
+    print("Analisando os valores passados...")
+    sleep(0.8)
+    if len(num) == 0 or len(num) < 0:
+        print("Foram informados 0 valores ao todo")
+        print(f"o maior valor informado foi 0")
+    else:
+        for numero in num:
+            sleep(0.8)
+            print(numero, end=' ')
+        print(f"foram informados {len(num)} valores ao todo")
+        print(f"o maior valor informado foi {max(num)}")
+
+maior(4,5,6,9,0,3)
+maior(3,1,2)
+maior(1,2)
+maior(6)
+maior()'''
+
+#faça um programa que tenha uma lista chamada numeros e duas funcoes
+#chamadas sorteio() e somaPar(). A primeira funcao vai sortear 5 numeros
+# e vai colocalos dentro da lista e a segunda funcao vai mostrar a soma
+#entre todos os valores pares sorteados pela função anterior
+
+numeros  = []
+numeros_pares = []
+
+def sorteio(numeros):
+    print(f"Sorteando 5 valores da lista:  ",  end= ' ')
+    for indice in range(0, 5):
+        sleep(0.8)
+        numeros.append(randint(0, 99))
+        indice += 1
+        print(numeros[-1], end=' ')
+    print('PRONTO!')
+
+def somaPar(numeros_pares):
+
+    soma_pares = sum(numeros_pares)
+    print(f"Somando os valores pares de {numeros}, temos {soma_pares}")
+
+sorteio(numeros)
+somaPar(numeros_pares)
 
 
 
